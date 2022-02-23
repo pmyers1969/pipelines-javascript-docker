@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pmyerspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pmyerspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: pmyerspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: pmyerspipelinesjavascriptdocker 
+          image: pm69containerregistry.azurecr.io/pmyerspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
